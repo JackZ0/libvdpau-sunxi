@@ -18,3 +18,18 @@ or for mpv:
    $ mpv --vo=vdpau --hwdec=vdpau --hwdec-codecs=all [filename]
 
 Note: Make sure that you have write access to both /dev/disp and /dev/cedar_dev
+
+执行的时候会报错误如下所示：
+mplayer -vo vdpau -vc ffmpeg12vdpau,ffh264vdpau, tansf.h264 
+MPlayer 1.3.0-4.6 (C) 2000-2016 MPlayer Team
+
+Playing tansf.h264.
+libavformat version 57.25.100 (internal)
+libavformat file format detected.
+[lavf] stream 0: video (h264), -vid 0
+VIDEO:  [H264]  1920x1080  0bpp  30.000 fps    0.0 kbps ( 0.0 kbyte/s)
+Error opening/initializing the selected video_out (-vo) device.
+No stream found.
+
+
+Exiting... (End of file)
