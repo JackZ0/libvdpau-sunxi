@@ -166,9 +166,10 @@ int cedarv_open(void)
 #endif
 
              VALGRIND_PRINTF("regs base addreess=%p\n", ve.regs);
-
+//这里有个big 坑
              AMMT_SET_REGS_BASE(ve.regs);
-
+// 没有实现 
+//实现部分应该是linux内核源码里面的初始化部分的提取 		
 	     ioctl(ve.fd, IOCTL_ENGINE_REQ, 0);
              ioctl(ve.fd, IOCTL_ENABLE_VE, 0);
 	     ioctl(ve.fd, IOCTL_SET_VE_FREQ, 320);
